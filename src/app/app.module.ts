@@ -15,11 +15,14 @@ import { PeopleComponent } from './people/people.component';
 import { MoviesComponent } from './movies/movies.component';
 import { PlanetsComponent } from './planets/planets.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
+
    { path: 'movies', component: MoviesComponent},
    { path: 'people', component: PeopleComponent},
    { path: 'planets', component: PlanetsComponent},
+   { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -27,7 +30,8 @@ const appRoutes: Routes = [
     AppComponent,
     PeopleComponent,
     MoviesComponent,
-    PlanetsComponent
+    PlanetsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

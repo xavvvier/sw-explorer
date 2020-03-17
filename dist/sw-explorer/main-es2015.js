@@ -76,13 +76,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const _c0 = function () { return ["/people"]; };
 class AppComponent {
     constructor() {
         this.title = 'sw-explorer';
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 16, vars: 0, consts: [[1, "container"], [1, "left-panel"], ["color", "primary"], [1, "material-icons"], ["mat-raised-button", "", "color", "primary", "routerLink", "/people"], ["mat-raised-button", "", "color", "primary", "routerLink", "/movies"], ["mat-raised-button", "", "color", "primary", "routerLink", "/planets"], [1, "right-panel"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 16, vars: 2, consts: [[1, "container"], [1, "left-panel"], ["color", "primary"], [1, "material-icons"], ["mat-raised-button", "", "color", "primary", 3, "routerLink"], ["mat-raised-button", "", "color", "primary", "routerLink", "/movies"], ["mat-raised-button", "", "color", "primary", "routerLink", "/planets"], [1, "right-panel"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-toolbar", 2);
@@ -109,6 +110,9 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "router-outlet");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](1, _c0));
     } }, directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_1__["MatToolbar"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_1__["MatToolbarRow"], _angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatButton"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLink"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterOutlet"]], styles: ["button[_ngcontent-%COMP%] {\n  display: block;\n  width: 7em;\n  margin: 0.4em;\n}\n\n.container[_ngcontent-%COMP%] {\n  padding: 0.2em;\n}\n\n@media (min-width: 800px) {\n  .container[_ngcontent-%COMP%] {\n    display: flex;\n  }\n\n  .left-panel[_ngcontent-%COMP%] {\n    width: 33%;\n    margin: 0.2em;\n  }\n\n  .right-panel[_ngcontent-%COMP%] {\n    width: 66%;\n    margin: 0.2em;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZ29uemFsZXovRGV2ZWxvcC9zdy1leHBsb3Jlci9zcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0csY0FBQTtFQUNBLFVBQUE7RUFDQSxhQUFBO0FDQUg7O0FERUE7RUFDRyxjQVBPO0FDUVY7O0FEQ0E7RUFDRztJQUNHLGFBQUE7RUNFSjs7RURBQztJQUNHLFVBQUE7SUFDQSxhQWZJO0VDa0JSOztFRERDO0lBQ0csVUFBQTtJQUNBLGFBbkJJO0VDdUJSO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIkc3BhY2luZzogLjJlbTtcbmJ1dHRvbntcbiAgIGRpc3BsYXk6IGJsb2NrO1xuICAgd2lkdGg6IDdlbTtcbiAgIG1hcmdpbjogLjRlbTtcbn1cbi5jb250YWluZXJ7XG4gICBwYWRkaW5nOiAkc3BhY2luZztcbn1cbkBtZWRpYSAobWluLXdpZHRoOiA4MDBweCkge1xuICAgLmNvbnRhaW5lcntcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICB9XG4gICAubGVmdC1wYW5lbHtcbiAgICAgIHdpZHRoOiAzMyU7XG4gICAgICBtYXJnaW46ICRzcGFjaW5nO1xuICAgfVxuICAgLnJpZ2h0LXBhbmVse1xuICAgICAgd2lkdGg6IDY2JTtcbiAgICAgIG1hcmdpbjogJHNwYWNpbmc7XG4gICB9XG59XG4iLCJidXR0b24ge1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2lkdGg6IDdlbTtcbiAgbWFyZ2luOiAwLjRlbTtcbn1cblxuLmNvbnRhaW5lciB7XG4gIHBhZGRpbmc6IDAuMmVtO1xufVxuXG5AbWVkaWEgKG1pbi13aWR0aDogODAwcHgpIHtcbiAgLmNvbnRhaW5lciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgfVxuXG4gIC5sZWZ0LXBhbmVsIHtcbiAgICB3aWR0aDogMzMlO1xuICAgIG1hcmdpbjogMC4yZW07XG4gIH1cblxuICAucmlnaHQtcGFuZWwge1xuICAgIHdpZHRoOiA2NiU7XG4gICAgbWFyZ2luOiAwLjJlbTtcbiAgfVxufSJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -181,7 +185,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
             _angular_material_list__WEBPACK_IMPORTED_MODULE_6__["MatListModule"],
             _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardModule"],
             _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_8__["MatProgressSpinnerModule"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(appRoutes),
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(appRoutes, { useHash: true }),
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"]
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
@@ -213,7 +217,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _angular_material_list__WEBPACK_IMPORTED_MODULE_6__["MatListModule"],
                     _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardModule"],
                     _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_8__["MatProgressSpinnerModule"],
-                    _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(appRoutes),
+                    _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(appRoutes, { useHash: true }),
                     _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"]
                 ],
                 providers: [],
