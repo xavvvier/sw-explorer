@@ -1,9 +1,16 @@
-<div>
-   <a routerLink="/people">People</a>
-   <a routerLink="/movies">Movies</a>
-   <a routerLink="/planets">Planets</a>
-</div>
-<div>
-   The screen: 
-   <router-outlet></router-outlet>
+<div class="container">
+   <div class="left-panel">
+      <mat-toolbar color="primary">
+        <mat-toolbar-row>
+           <i class="material-icons">dehaze</i>
+           <span>Star Wars Explorer</span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <button mat-raised-button  color="primary" routerLink="/people">People</button>
+      <button mat-raised-button  color="primary" routerLink="/movies">Movies</button>
+      <button mat-raised-button  color="primary" routerLink="/planets">Planets</button>
+   </div>
+   <div class="right-panel">
+      <router-outlet></router-outlet>
+   </div>
 </div>

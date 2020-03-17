@@ -1,0 +1,16 @@
+.content-panel{
+   .panel {
+      width: 100%;
+   }
+}
+
+@media (min-width: 800px) {
+   .content-panel{
+      display: flex;
+
+      .panel {
+         width: 50%;
+         margin-right: 0.4em;
+      }
+   }
+}

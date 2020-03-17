@@ -1,0 +1,22 @@
+$spacing: .2em;
+button{
+   display: block;
+   width: 7em;
+   margin: .4em;
+}
+.container{
+   padding: $spacing;
+}
+@media (min-width: 800px) {
+   .container{
+      display: flex;
+   }
+   .left-panel{
+      width: 33%;
+      margin: $spacing;
+   }
+   .right-panel{
+      width: 66%;
+      margin: $spacing;
+   }
+}
