@@ -3,3 +3,13 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .material-icons {padding-right: 1em;}
+mat-progress-spinner{
+    margin: 50px auto;
+}
+mat-list-item{
+   cursor: pointer;
+   &.selected {
+      background-color: lightblue;
+   }
+}
+
