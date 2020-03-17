@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PlanetsService } from '../planets.service';
+import { Planet } from '../planets.models';
 
 @Component({
   selector: 'app-planets',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetsComponent implements OnInit {
 
-  constructor() { }
+  public selected: Planet;
 
-  ngOnInit(): void {
+  constructor(public planetsService: PlanetsService) { }
+
+  ngOnInit(): void {}
+
+  public select(planet: Planet) {
+     this.selected = planet;
   }
 
 }

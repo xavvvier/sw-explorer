@@ -3,48 +3,44 @@
       <mat-toolbar color="primary">
          <mat-toolbar-row>
             <i class="material-icons">dehaze</i>
-            <span>People</span>
+            <span>Movies</span>
          </mat-toolbar-row>
       </mat-toolbar>
       <mat-list>
-         <mat-list-item> 
+         <mat-list-item *ngFor="let movie of moviesService.movies | async"
+               [class.selected]="selected && movie.episode_id == selected.episode_id"
+               (click)="select(movie)"
+            > 
             <i class="material-icons">insert_emoticon</i>
-            Pepper 
-         </mat-list-item>
-         <mat-list-item>
-            <i class="material-icons">insert_emoticon</i>
-            Salt 
-         </mat-list-item>
-         <mat-list-item> 
-            <i class="material-icons">insert_emoticon</i>
-            Paprika 
+            {{movie.title}}
          </mat-list-item>
       </mat-list>
+      <mat-progress-spinner mode="indeterminate" *ngIf="!moviesService.loaded"></mat-progress-spinner>
    </div>
    <div class="panel">
       <mat-toolbar color="primary">
         <mat-toolbar-row>
            <i class="material-icons">dehaze</i>
-           <span>People</span>
+           <span>Details</span>
         </mat-toolbar-row>
       </mat-toolbar>
-      <mat-card>
+      <mat-card *ngIf="selected">
          <mat-card-title>
-            The name of the subject
+            {{selected.title}}
          </mat-card-title>
          <mat-card-content>
             <mat-list>
                <mat-list-item>
-                  <h4 matLine>Some attribute</h4>
-                  <p matLine>The value</p>
+                  <h5 matLine>Director</h5>
+                  <p matLine>{{selected.director}}</p>
                </mat-list-item>
                <mat-list-item>
-                  <h4 matLine>Other attribute</h4>
-                  <p matLine>The other value</p>
+                  <h5 matLine>Producers</h5>
+                  <p matLine>{{selected.producer}}</p>
                </mat-list-item>
                <mat-list-item>
-                  <h4 matLine>Last attribute</h4>
-                  <p matLine>The third value</p>
+                  <h5 matLine>Release Date</h5>
+                  <p matLine>{{selected.release_date}}</p>
                </mat-list-item>
             </mat-list>
          </mat-card-content>

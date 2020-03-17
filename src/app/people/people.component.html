@@ -1,1 +1,61 @@
-<p>people works!</p>
+<div class="content-panel">
+   <div class="panel">
+      <mat-toolbar color="primary">
+         <mat-toolbar-row>
+            <i class="material-icons">dehaze</i>
+            <span>People</span>
+         </mat-toolbar-row>
+      </mat-toolbar>
+      <mat-list>
+         <mat-list-item *ngFor="let person of peopleService.people | async"
+               [class.selected]="selected && person.name == selected.name"
+               (click)="select(person)"
+            > 
+            <i class="material-icons">insert_emoticon</i>
+            {{person.name}}
+         </mat-list-item>
+      </mat-list>
+      <mat-progress-spinner mode="indeterminate" *ngIf="!peopleService.loaded"></mat-progress-spinner>
+   </div>
+   <div class="panel">
+      <mat-toolbar color="primary">
+        <mat-toolbar-row>
+           <i class="material-icons">dehaze</i>
+           <span>Details</span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <mat-card *ngIf="selected">
+         <mat-card-title>
+            {{selected.name}}
+         </mat-card-title>
+         <mat-card-content>
+            <mat-list>
+               <mat-list-item>
+                  <h5 matLine>Height</h5>
+                  <p matLine>{{selected.height}}</p>
+               </mat-list-item>
+               <mat-list-item>
+                  <h5 matLine>Mass</h5>
+                  <p matLine>{{selected.mass}}</p>
+               </mat-list-item>
+               <mat-list-item>
+                  <h5 matLine>Hair Color</h5>
+                  <p matLine>{{selected.hair_color}}</p>
+               </mat-list-item>
+               <mat-list-item>
+                  <h5 matLine>Skin Color</h5>
+                  <p matLine>{{selected.skin_color}}</p>
+               </mat-list-item>
+               <mat-list-item>
+                  <h5 matLine>Gender</h5>
+                  <p matLine>{{selected.gender}}</p>
+               </mat-list-item>
+               <mat-list-item>
+                  <h5 matLine>Birth Year</h5>
+                  <p matLine>{{selected.birth_year}}</p>
+               </mat-list-item>
+            </mat-list>
+         </mat-card-content>
+      </mat-card>
+   </div>
+</div>

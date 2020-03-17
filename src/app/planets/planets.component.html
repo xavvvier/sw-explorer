@@ -1,1 +1,45 @@
-<p>planets works!</p>
+<div class="content-panel">
+   <div class="panel">
+      <mat-toolbar color="primary">
+         <mat-toolbar-row>
+            <i class="material-icons">dehaze</i>
+            <span>Planets</span>
+         </mat-toolbar-row>
+      </mat-toolbar>
+      <mat-list>
+         <mat-list-item *ngFor="let planet of planetsService.planets | async"
+               [class.selected]="selected && planet.name == selected.name"
+               (click)="select(planet)"
+            > 
+            <i class="material-icons">insert_emoticon</i>
+            {{planet.name}}
+         </mat-list-item>
+      </mat-list>
+      <mat-progress-spinner mode="indeterminate" *ngIf="!planetsService.loaded"></mat-progress-spinner>
+   </div>
+   <div class="panel">
+      <mat-toolbar color="primary">
+        <mat-toolbar-row>
+           <i class="material-icons">dehaze</i>
+           <span>Details</span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <mat-card *ngIf="selected">
+         <mat-card-title>
+            {{selected.name}}
+         </mat-card-title>
+         <mat-card-content>
+            <mat-list>
+               <mat-list-item>
+                  <h5 matLine>Terrain</h5>
+                  <p matLine>{{selected.terrain}}</p>
+               </mat-list-item>
+               <mat-list-item>
+                  <h5 matLine>Population</h5>
+                  <p matLine>{{selected.population}}</p>
+               </mat-list-item>
+            </mat-list>
+         </mat-card-content>
+      </mat-card>
+   </div>
+</div>
